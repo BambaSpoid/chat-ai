@@ -3,8 +3,13 @@ import requests
 
 st.title("Chat-AI Interface: résumé de texte")
 
-st.secrets["OPENAI_API_KEY"]
-st.secrets["MODEL_API"]
+## Sidebar with secrets
+st.sidebar.title("Secrets")
+api_key = st.sidebar.text_input("OpenAI API Key: ", type="password")
+model_api = st.sidebar.text_input("Model API", type="password")
+
+# st.secrets["OPENAI_API_KEY"]
+# st.secrets["MODEL_API"]
 
 st.header("1) Summariser un fichier texte")
 
