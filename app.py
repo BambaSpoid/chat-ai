@@ -3,6 +3,9 @@ import requests
 
 st.title("Chat-AI Interface: résumé de texte")
 
+st.secrets["OPENAI_API_KEY"]
+st.secrets["MODEL_API"]
+
 st.header("1) Summariser un fichier texte")
 
 if "resume" not in st.session_state:
